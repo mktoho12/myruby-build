@@ -14,8 +14,7 @@ RUN apt-get update && apt-get install -y \
   libssl-dev \
   && rm -rf /var/lib/apt/lists/*
 
+RUN mkdir /workdir
 WORKDIR /workdir
-RUN git clone https://github.com/ruby/ruby.git
-RUN cd ruby && autoconf
 
 CMD ["echo", "hello"]
